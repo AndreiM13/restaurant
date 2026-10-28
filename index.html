@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrei's Diner</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <section id="hero">
+        <h2 class="title">Andrei's Diner</h2>
+        <p class="text">The best burger and pizza in town</p>
+    </section>
+
+    <section id="main"></section>
+
+    <section id="check-out">
+        <div id="order-summary"></div>
+        <button id="complete-order">Complete Order</button>
+    </section>
+
+    <section id="popup" class="hidden">
+        <div class="modal">
+            <button id="close-popup" type="button">×</button>
+
+            <h2>Enter card details</h2>
+
+            <form id="payment-form">
+                <input
+                    type="text"
+                    id="customer-name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="card-number"
+                    placeholder="Enter card number"
+                    inputmode="numeric"
+                    pattern="[0-9]{13,19}"
+                    maxlength="19"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="card-cvv"
+                    placeholder="Enter CVV"
+                    inputmode="numeric"
+                    pattern="[0-9]{3,4}"
+                    maxlength="4"
+                    required
+                >
+
+                <button type="submit" id="pay-btn">
+                    Pay
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section id="thank-you"></section>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>
